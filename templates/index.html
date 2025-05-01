@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy"
+          content="style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com;">
+    <title>VaultLock</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+    <div class="vault-header">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/safe.png" alt="vault icon" width="36" />
+        <span class="vault-title">VaultLock</span>
+    </div>
+
+    <section class="vault-body">
+        <div class="card">
+            <h2 class="card-title">Encrypt & Decrypt Panel</h2>
+
+            <div class="form-group">
+                <label for="messageInput" class="field-label">Your Message</label>
+                <textarea id="messageInput" class="text-box" rows="6" placeholder="Write something to encrypt..."></textarea>
+            </div>
+
+            <div class="btn-cluster">
+                <button id="btnKeygen" class="action-btn">🧬 Create Keys</button>
+                <button id="btnEncrypt" class="action-btn">🔐 Encrypt</button>
+                <button id="btnDecrypt" class="action-btn">🗝️ Decrypt</button>
+            </div>
+
+            <div class="result-panel" id="resultPanel">Awaiting action...</div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
